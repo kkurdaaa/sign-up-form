@@ -13,9 +13,13 @@ First name: <input type="text" name="fname" placeholder="enter your First name">
 <br><br>
 last name: <input type="text" name="lname" placeholder="enter your last name">
 <br><br>
-email: <input type="text" name="email" placeholder="enter your email">
+<div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1"  name="email"aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
 <br><br>
-Phone Number: <input type="number" name="phone" placeholder="enter your phone number">
+Phone Number: <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"placeholder="enter your phone number">
 <br><br>
 department: <input type="text" name="department" placeholder="enter your department">
 <br><br>
@@ -36,3 +40,4 @@ re-enter your password: <input type="password" name="rpass" placeholder="enter y
 </form>
 </body>
 </html>
+<form>

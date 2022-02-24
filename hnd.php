@@ -9,13 +9,54 @@
 <?php
 
 
+
 if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
     $emailErr = "Invalid email format";
 }
 
+elseif (empty($_POST['fname'] && $_POST['lname']))
+{
+    echo "fill your name fields";
+    echo '<br>'; 
+}
 
+elseif (empty($_POST['phone']))
+{
+    echo "fill your phone number";
+    echo '<br>'; 
+}
 
-if(!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['department']) && !empty($_POST['tech']) && !empty($_POST['uname']) && !empty($_POST['pass']) && !empty($_POST['rpass']))
+elseif (empty($_POST['email']))
+{
+    echo "fill your email";
+    echo '<br>'; 
+}
+
+elseif (empty($_POST['department']))
+{
+    echo "fill your department";
+    echo '<br>'; 
+}
+
+elseif (empty($_POST['tech']))
+{
+    echo "fill your tech selection";
+    echo '<br>'; 
+}
+
+elseif (empty($_POST['uname']))
+{
+    echo "fill your username";
+    echo '<br>'; 
+}
+
+elseif(($_POST['pass'])!=($_POST['rpass']))
+{
+    echo "your password doesn't match each other";
+    echo '<br>'; 
+}
+
+elseif(!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['department']) && !empty($_POST['tech']) && !empty($_POST['uname']) && !empty($_POST['pass']) && !empty($_POST['rpass']))
 {
     echo 'Dear ';
     echo $_POST["fname"]; 
